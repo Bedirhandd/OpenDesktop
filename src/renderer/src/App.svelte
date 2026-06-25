@@ -1,7 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte'
 
-  import TitleBar from './components/TitleBar.svelte'
+  import ChatPanel from '@/components/panels/ChatPanel.svelte'
+  import FileExplorerPanel from '@/components/panels/FileExplorerPanel.svelte'
+  import SessionsPanel from '@/components/panels/SessionsPanel.svelte'
+  import TerminalPanel from '@/components/panels/TerminalPanel.svelte'
+  import TitleBar from '@/components/TitleBar.svelte'
 
   let maximized = $state(false)
 
@@ -24,8 +28,14 @@
 >
   <TitleBar {maximized} />
 
-  <main class="flex flex-1 flex-col items-center justify-center gap-3 p-8 text-center">
-    <h1 class="text-3xl font-bold tracking-tight">OpenDesktop</h1>
-    <p class="text-text-secondary text-base/relaxed max-inline-md">Desktop UI application shell for AI coding agents</p>
+  <main class="flex flex-1 gap-3 p-3 min-block-0">
+    <SessionsPanel />
+
+    <div class="flex flex-1 flex-col gap-3 min-block-0 min-inline-0">
+      <ChatPanel />
+      <TerminalPanel />
+    </div>
+
+    <FileExplorerPanel />
   </main>
 </div>

@@ -11,6 +11,7 @@
 
   --radius-window: 0.75rem;
   --shadow-window: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --radius-panel: 0.75rem;
 }
 
 @layer base {
@@ -43,4 +44,8 @@
   [role='button']:not(:disabled) {
     cursor: pointer;
   }
+}
+
+@utility panel-shell {
+  @apply bg-surface-soft/20 rounded-panel border border-white/10 min-block-0 min-inline-0;
 }
