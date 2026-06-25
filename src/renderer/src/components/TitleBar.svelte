@@ -1,20 +1,8 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
-
-  let maximized = $state(false)
-
-  onMount(() => {
-    void window.api.isWindowMaximized().then((value) => {
-      maximized = value
-    })
-
-    return window.api.onWindowMaximizedChanged((value) => {
-      maximized = value
-    })
-  })
+  let { maximized = false }: { maximized?: boolean } = $props()
 </script>
 
-<header class="bg-surface-mute flex shrink-0 items-center justify-between border-be border-white/5 px-3 [-webkit-app-region:drag] block-9">
+<header class="flex shrink-0 items-center justify-between px-3 [-webkit-app-region:drag] block-9">
   <span class="text-text-secondary text-sm font-medium select-none">OpenDesktop</span>
 
   <div class="flex items-center [-webkit-app-region:no-drag]">

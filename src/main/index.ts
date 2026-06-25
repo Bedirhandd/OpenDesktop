@@ -7,10 +7,13 @@ import { attachWindowStateEvents, registerWindowControlHandlers } from './window
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 670,
+    width: 1600,
+    height: 900,
     show: false,
     frame: false,
+    transparent: true,
+    backgroundColor: '#00000000',
+    hasShadow: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
