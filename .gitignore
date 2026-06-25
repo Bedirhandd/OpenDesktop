@@ -1,0 +1,16 @@
+node_modules/
+out/
+dist/
+*.local
+.DS_Store
+.eslintcache
+*.log*
+
+tmp/
+.project-memory/
+
+AGENTS.md
+CLAUDE.md
+.claude/
+.cursor/
+.codex/
