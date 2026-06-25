@@ -1,1 +1,1 @@
-<section class="panel-shell flex-1 min-block-0" aria-label="Chat Panel"></section>
+<section class="panel-shell block-full inline-full" aria-label="Chat Panel"></section>
