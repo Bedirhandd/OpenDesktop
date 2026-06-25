@@ -7,6 +7,20 @@ import svelteParser from 'svelte-eslint-parser'
 
 const tailwindEntryPoint = 'src/renderer/src/assets/main.css'
 
+const importPathRules = {
+  'no-restricted-imports': [
+    'error',
+    {
+      patterns: [
+        {
+          group: ['..', '../*', '../**'],
+          message: 'Parent-relative imports are not allowed. Use @/ for cross-directory imports or ./ for same-directory imports.'
+        }
+      ]
+    }
+  ]
+}
+
 const strictTailwindRules = {
   // Class order is enforced by prettier-plugin-tailwindcss (format:check).
   // eslint-plugin-better-tailwindcss uses a different sort algorithm for custom @theme utilities.
@@ -24,6 +38,10 @@ export default defineConfig(
   tseslint.configs.recommended,
   eslintPluginSvelte.configs['flat/recommended'],
   eslintPluginBetterTailwindcss.configs['recommended-error'],
+  {
+    files: ['src/**/*.{svelte,ts,tsx,js,jsx}'],
+    rules: importPathRules
+  },
   {
     files: ['**/*.{svelte,ts,tsx,js,jsx}'],
     settings: {
