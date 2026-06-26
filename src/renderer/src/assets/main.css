@@ -49,3 +49,7 @@
 @utility panel-shell {
   @apply bg-surface-soft/20 rounded-panel border border-white/10 min-block-0 min-inline-0;
 }
+
+@utility panel-shell-flat {
+  @apply bg-surface min-block-0 min-inline-0;
+}
