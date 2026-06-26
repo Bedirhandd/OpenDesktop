@@ -53,3 +53,13 @@
 @utility panel-shell-flat {
   @apply bg-surface min-block-0 min-inline-0;
 }
+
+@keyframes session-running-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility session-running-spinner {
+  animation: session-running-spin 0.85s linear infinite;
+}

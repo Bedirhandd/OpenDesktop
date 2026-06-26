@@ -75,7 +75,7 @@
 >
   <TitleBar {maximized} />
 
-  <main bind:clientWidth={layoutWidth} class="flex flex-1 px-3 min-block-0">
+  <main bind:clientWidth={layoutWidth} class="flex flex-1 px-3 pbe-3 min-block-0">
     <div class="shrink-0 overflow-hidden min-inline-0" style:width="{sessionsWidth}px">
       <SessionsPanel />
     </div>
