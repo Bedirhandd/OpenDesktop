@@ -4,18 +4,19 @@ This repository enforces a single naming convention for branches, commits, and p
 
 ## Types
 
-| Type       | Use for                                                 |
-| ---------- | ------------------------------------------------------- |
-| `feat`     | New behavior or capability                              |
-| `fix`      | Bug fix                                                 |
-| `refactor` | Code change that neither fixes a bug nor adds a feature |
-| `docs`     | Documentation only                                      |
-| `test`     | Tests only                                              |
-| `chore`    | Tooling, dependencies, repo maintenance                 |
-| `build`    | Build system or packaging                               |
-| `ci`       | CI configuration                                        |
-| `style`    | Formatting, whitespace, no logic change                 |
-| `perf`     | Performance improvement                                 |
+| Type        | Use for                                                 |
+| ----------- | ------------------------------------------------------- |
+| `feat`      | New behavior or capability                              |
+| `fix`       | Bug fix                                                 |
+| `refactor`  | Code change that neither fixes a bug nor adds a feature |
+| `docs`      | Documentation only                                      |
+| `test`      | Tests only                                              |
+| `chore`     | Tooling, dependencies, repo maintenance                 |
+| `build`     | Build system or packaging                               |
+| `ci`        | CI configuration                                        |
+| `style`     | Formatting, whitespace, no logic change                 |
+| `perf`      | Performance improvement                                 |
+| `prototype` | Exploratory work on a side branch, not for direct merge |
 
 ## Branch names
 
@@ -36,6 +37,7 @@ fix/sessions
 refactor/sidebar
 docs/contributing
 chore/deps
+prototype/ui
 ```
 
 Create branches from `main`:
